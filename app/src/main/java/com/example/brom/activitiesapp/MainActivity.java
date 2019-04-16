@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 Toast.makeText(getApplicationContext(), "Location " + mountainLocations[position] + " Height " + mountainHeights[position], Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getApplicationContext(), MountainDetailsActivity.class);
+                startActivity(intent);
             }
         });
 
