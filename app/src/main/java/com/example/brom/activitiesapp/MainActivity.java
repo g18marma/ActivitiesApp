@@ -35,11 +35,12 @@ public class MainActivity extends AppCompatActivity {
         myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                Toast.makeText(getApplicationContext(), "Location " + mountainLocations[position] + " Height " + mountainHeights[position], Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(getApplicationContext(), MountainDetailsActivity.class);
+                intent.putExtra("berg", mountainNames [position]);
                 startActivity(intent);
             }
         });
+
 
 
         // 1. Create a ListView as in previous assignment
