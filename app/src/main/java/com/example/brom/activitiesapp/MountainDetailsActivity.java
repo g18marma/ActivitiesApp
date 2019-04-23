@@ -19,7 +19,7 @@ public class MountainDetailsActivity extends AppCompatActivity {
         Log.d(TAG, "onCreate: Started");
 
         Intent incomingIntent = getIntent();
-        String incomingName = incomingIntent.getStringExtra("berg");
+        String incomingName = incomingIntent.getStringExtra("berg" );
         Log.d(TAG, "onCreate: Found incoming name: " + incomingName);
 
         incomingData.setText(incomingName);
